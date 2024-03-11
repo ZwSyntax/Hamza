@@ -1,7 +1,7 @@
 # TalkDrove
 
 Check The demo here [Demo](https://hamza-one.vercel.app/)<br>
-Hello, I'm Hamza 😃, a 17-year-old Full-Stack Developer who loves crafting innovative websites. Here's a glimpse of my skills and experiences:
+Hello, I'm Hamza, a 17-year-old Full-Stack Developer who loves crafting innovative websites. Here's a glimpse of my skills and experiences:
 
 ## About Me
 
@@ -31,7 +31,7 @@ I'm a passionate developer with 2 years of experience, having successfully compl
 
 - Static Website Development
 - Dynamic Website Development
-- Check out my [portfolio](#portfolio) for examples.
+- Check out my [portfolio](https://hamza-one.vercel.app/) for examples.
 
 ## Portfolio
 
@@ -68,8 +68,4 @@ I'm a passionate developer with 2 years of experience, having successfully compl
 - **Whatsapp:** +923072380380
 - **Facebook:** Hamza
 
-Feel free to reach out for any inquiries or collaboration opportunities. Let's create something amazing together! 😊
-
----
-
-**Home | About | Skills | Work | Contact | © 2023 Hamza. All rights reserved.**
+Feel free to reach out for any inquiries or collaboration opportunities. Let's create something amazing together!
