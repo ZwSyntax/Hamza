@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>egaugnaL Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #resultContainer {
+            margin-top: 20px;
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        #copyButton, #clearButton {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #loadingSpinner {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to egaugnaL Converter</h1>
+
+    <label for="textInput">Enter text to be reversed:</label>
+    <input type="text" id="textInput" placeholder="Type here...">
+
+    <button onclick="reverseText()">Convert Text</button>
+    <button id="clearButton" onclick="clearText()">Clear</button>
+
+    <div id="loadingSpinner">&#8635; Converting...</div>
+    <div id="resultContainer"></div>
+
+    <button id="copyButton" onclick="copyText()">Copy Result</button>
+
+    <script>
+        function reverseText() {
+            var userInput = document.getElementById('textInput').value;
+            
+            if (userInput.trim() === "") {
+                alert("Please enter some text before converting.");
+                return;
+            }
+
+            var resultContainer = document.getElementById('resultContainer');
+            var copyButton = document.getElementById('copyButton');
+            var clearButton = document.getElementById('clearButton');
+            var loadingSpinner = document.getElementById('loadingSpinner');
+
+            loadingSpinner.style.display = 'inline-block';
+
+            setTimeout(function() {
+                var reversedText = userInput.split('').reverse().join('');
+                resultContainer.innerHTML = reversedText;
+                resultContainer.style.display = 'block';
+                copyButton.style.display = 'inline-block';
+                clearButton.style.display = 'inline-block';
+                loadingSpinner.style.display = 'none';
+            }, 2000); // Simulating a delay for better user experience
+        }
+
+        function copyText() {
+            var resultContainer = document.getElementById('resultContainer');
+            var textArea = document.createElement('textarea');
+            textArea.value = resultContainer.innerText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Text copied to clipboard!');
+        }
+
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            document.getElementById('resultContainer').style.display = 'none';
+            document.getElementById('copyButton').style.display = 'none';
+            document.getElementById('clearButton').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
