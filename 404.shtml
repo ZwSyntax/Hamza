@@ -341,8 +341,19 @@
                 opacity: .1
             }
         }
-        .TalkDrove{
-            
+        .talk_i{
+            color: #05bcff;
+        }
+        .drove_i{
+            color: #1bdeba;
+        }
+        .h_i{
+            color:  #0088ff;
+
+        }
+        .amza_i{
+            color: #00ffe1;
+
         }
     </style>
     <script src="https://www.chat.talkdrove.cc.nf/static/vendor/jquery/jquery.min.js"></script>
@@ -371,7 +382,7 @@
     <div class="box">
         <div class="box__ghost">
             <div class="symbol">
-                <h1>Hamza</h1>
+                <h1><i class="h_i">H</i><i class="amza_i">amza</i></h1>
             </div>
             <div class="symbol"></div>
             <div class="symbol"></div>
@@ -390,7 +401,7 @@
                     <div></div>
                     <div></div>
                     <div>
-                        <h1 class="TalkDrove"><i>TalkDrove</i></h1>
+                        <h1 class="TalkDroveh1"><i><i class="talk_i">Talk</i><i class="drove_i">Drove</i></i></h1>
                     </div>
                 </div>
             </div>
@@ -399,12 +410,12 @@
 
         <div class="box__description">
             <div class="box__description-container">
-                <div class="box__description-title">Whoops!</div>
+                <div class="box__description-title">Oops!</div>
                 <div><b>404</b></div>
-                <div class="box__description-text">Sorry, This page page could not found</div>
+                <div class="box__description-text">Sorry, We couldn't find the path 😞</div>
             </div>
 
-            <a href="https://www.talkdrove.cc.nf/" class="box__button">Home</a>
+            <a href="index.html" class="box__button">Home</a>
 
         </div>
 
